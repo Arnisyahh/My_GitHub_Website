@@ -1,1 +1,1 @@
-Syahrène | Beaute
+SYAHRÈNE | BEAUTY
