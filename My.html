@@ -1,1 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Syahrène - Website Kecantikan</title>
+  <style>
+    /* General Layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 60px;
+    }
+
+    /* Header */
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 50px;
+      background-color: #fff;
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #ff6f61;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    button {
+      background-color: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff3b2a;
+    }
+
+    /* Form Elements */
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Images */
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Cards */
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 1em;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background-color: #ffefef;
+      padding: 30px;
+      border-left: 5px solid #ff6f61;
+      margin: 30px 0;
+    }
+
+    .testimonial blockquote {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    .testimonial footer {
+      font-size: 1em;
+      text-align: right;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      nav {
+        text-align: center;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .card {
+        margin: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 15px;
+      }
+
+      nav {
+        font-size: 1em;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Selamat Datang di Syahrène</h1>
+    <p>Temukan tips dan trik kecantikan yang membantu mempercantik diri Anda!</p>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Skincare</a>
+    <a href="#">Hairstyle</a>
+    <a href="#">Makeup</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <section>
+    <h2>Perawatan Kulit</h2>
+    <div class="card">
+      <img src="https://via.placeholder.com/500x300" alt="Perawatan Kulit">
+      <h3>Perawatan Kulit Sehari-hari</h3>
+      <p>Jaga kulit Anda dengan rutinitas perawatan yang tepat untuk hasil terbaik!</p>
+    </div>
+
+    <h2>Gaya Rambut</h2>
+    <div class="card">
+      <img src="https://via.placeholder.com/500x300" alt="Gaya Rambut">
+      <h3>Tren Gaya Rambut Terbaru</h3>
+      <p>Cari tahu gaya rambut yang paling cocok dengan kepribadian Anda.</p>
+    </div>
+
+    <h2>Makeup</h2>
+    <div class="card">
+      <img src="https://via.placeholder.com/500x300" alt="Makeup">
+      <h3>Riasan Natural untuk Setiap Hari</h3>
+      <p>Riasan natural bisa membuat penampilan Anda lebih segar setiap hari.</p>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <blockquote>
+      "Saya merasa lebih percaya diri sejak mengikuti tips dari Syahrène!"
+    </blockquote>
+    <footer>- Jessica</footer>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Syahrène. Semua Hak Dilindungi.</p>
+    <p><a href="#">Privasi</a> | <a href="#">Ketentuan Layanan</a></p>
+  </footer>
+</body>
+
+</html>
 
