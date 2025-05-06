@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syahrine - Shine with Serenity</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: #fcefd9;
+      border-top: 3px solid hotpink;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .icons img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    nav {
+      background: linear-gradient(to right, #fbc2eb, #fceabb, #e0f7fa, #e1bee7);
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 1rem;
+      padding: 0.3rem 0.6rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom: 2px solid black;
+    }
+
+    .hero {
+      background-image: url('download.png');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      color: #fcefd9;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="topbar">
+      <img src="Pink_Elegant_Styles_Monogram_Logo__1_-removebg-preview (1).png" alt="Logo" class="logo" />
+      <div class="icons">
+        <img src="heart-icon.png" alt="Wishlist" />
+        <img src="user-icon.png" alt="User Account" />
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Hairstyle</a>
+      <a href="#">Makeup</a>
+      <a href="#">Skincare</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Shine with Serenity!</h1>
+  </section>
+
+</body>
+</html>
