@@ -3,372 +3,363 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shine with Serenity</title>
+  <title>Home | Serenity Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body, html {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf5;
     }
 
-    /* HEADER */
-    .top-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background-color: #fff8f0;
+    header {
+      background: linear-gradient(to right, #ffebc5, #e1f0ff, #e7d6ff);
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 0.4em 1em;
-      border-bottom: 2px solid #f2c2d4;
-    }
-    
-
-    .logo img {
-      height: 57px;
-    }
-
-    .icons {
-      display: flex;
-      gap: 1em;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
-    .icons img {
-      height: 24px;
-      cursor: pointer;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d87093;
     }
 
-    /* Menu Navigasi */
-    .nav-header {
-      position: sticky;
-      top: 85px;
-      z-index: 999;
-      background: linear-gradient(to right, #ffc0cb, #ffff99, #ccffff, #e6ccff);
-      display: flex;
-      justify-content: center;
-      padding: 1.3em 1em;
-      border-bottom: 1px solid #ff66b2;
-    }
-
-    .nav-header nav {
-      display: flex;
-      gap: 2em;
-    }
-
-    .nav-header a {
+    nav a {
+      margin: 0 1rem;
       text-decoration: none;
-      color: #000;
-      font-size: 16px;
-      transition: 0.3s ease;
+      color: #333;
+      font-weight: 500;
+      position: relative;
     }
 
-    .nav-header a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #d87093;
     }
 
-    /* HERO */
+    .icons a {
+      color: #333;
+      margin-left: 15px;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+
+    .icons a:hover {
+      color: #d87093;
+    }
+
     .hero {
       position: relative;
-      width: 100%;
-      height: 90vh;
-      background-image: url('https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/download.png');
-      background-size: cover;
-      background-position: center;
+      height: 100vh;
+      background: url('background.png') no-repeat center center/cover;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding-top: 120px;
+      box-sizing: border-box;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 4em;
-      color: #fcecd9;
-      text-shadow: 2px 2px 5px #000;
+      font-size: 3.5rem;
+      color: #ffeecf;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
     }
 
-    /* CHAT ICON */
+    .search-box {
+      display: flex;
+      background: none;
+      border-radius: 50px;
+      padding: 10px 20px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      align-items: center;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 50px;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+    }
+
+    .search-box button:hover {
+      color: black;
+    }
+
     .chat-icon {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #5f5cdb;
-      color: #fff;
-      width: 50px;
-      height: 50px;
+      background-color: #5a4fcf;
+      color: white;
+      padding: 0.8rem;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      font-size: 1.5rem;
       cursor: pointer;
+      z-index: 999;
     }
 
-    @media (max-width: 768px) {
-      .nav-header nav {
-        flex-wrap: wrap;
-        gap: 1em;
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
       }
 
-      .hero h1 {
-        font-size: 2.2em;
-        padding: 0 1em;
+      .search-box {
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 12px;
+      }
+
+      .search-box input {
+        width: 100%;
+        margin-bottom: 10px;
       }
     }
   </style>
+  <script>
+    function handleSearch(e) {
+      e.preventDefault();
+      const keyword = document.getElementById('searchInput').value;
+      alert('Anda mencari: ' + k);
+    }
+  </script>
 </head>
 <body>
 
-  <!-- Header Atas -->
-  <div class="top-header">
-    <div class="logo">
-      <img src="https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/Pink_Elegant_Styles_Monogram_Logo__1_-removebg-preview%20(1).png" alt="Logo">
-    </div>
-    <div class="icons">
-      <img src="https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/725091.png" alt="Favorite Icon">
-      <img src="https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/202-2024580_png-file-profile-icon-vector-png-removebg-preview.png" alt="User Icon">
-    </div>
-  </div>
-
-  <!-- Header Bawah / Navigation -->
-  <div class="nav-header">
+  <header>
+    <div class="logo">Syahrène</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Hairstyle</a>
-      <a href="#">Makeup</a>
-      <a href="#">Skincare</a>
-      <a href="#">Contact</a>
-      <a href="#">Blog</a>
+      <a href="https://230c6f14-4f3d-4cf0-b4c4-59e5a51f0af6-00-2z3nzew17qgcd.sisko.replit.dev/index.html">Home</a>
+      <a href="project web/about.html">About</a>
+      <a href="project web/hairstyle.html">Hairstyle</a>
+      <a href="project web/makeup.html">Makeup</a>
+      <a href="project web/skincare.html">Skincare</a>
+      <a href="project web/contact.html">Contact</a>
+      <a href="project web/blog.html">Blog</a>
     </nav>
-  </div>
+    <div class="icons">
+      <a href="/project web/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+      <a href="/project web/user.html"><i class="fa-regular fa-user"></i></a>
+    </div>
+  </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h1>Shine with Serenity!</h1>
+    <form class="search-box" onsubmit="handleSearch(event)">
+      <input type="text" id="searchInput" placeholder="Cari tips, produk, atau artikel...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
   </section>
 
-  <!-- Chat Icon -->
-  <div class="chat-icon">💬</div>
+  <a href="project web/chat.html" class="chat-icon">
+    <i class="fa-solid fa-comment"></i>
+  </a>
 
 </body>
 </html>
 
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skincare</title>
-  <style>
-    body {
-      margin: 0;
-      font-size: 25px;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-
-    .image-left, .image-right {
-      flex: 1;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .image-left {
-      background-image: url('https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/skincare1.png'); 
-    }
-
-    .image-right {
-      background-image: url('https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/skincare2.png');
-    }
-
-    .content {
-      flex: 1;
-      background-color: #FFE6A7;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 50px;
-    }
-
-    .content h1 {
-      font-size: 50px;
-      margin-bottom: 50px;
-      color: #00000;
-    }
-
-    .content p {
-      font-size: 18px;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .image-left, .image-right {
-        height: 200px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="image-left"></div>
-    <div class="content">
-      <div>
-        <h1>Skincare</h1>
-        <p>Hadir dengan informasi lengkap tentang perawatan kulit, mulai dari rutinitas dasar hingga solusi untuk masalah kulit seperti jerawat, kulit kering, atau tanda penuaan dini.</p>
-      </div>
-    </div>
-    <div class="image-right"></div>
-  </div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hairstyle & Makeup</title>
+  <title>Gallery | Serenity Beauty</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f4ebf9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #fffaf5, #fff0f6);
     }
 
-    .section {
-      display: flex;
-      background-color: #ffe6a7;
-      padding: 40px 20px;
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .section-title {
       text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      color: #b45787;
+      font-weight: bold;
+    }
+
+    .section-desc {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .gallery {
+      display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 1.5rem;
     }
 
-    .column {
-      flex: 1;
-      margin: 0 20px;
-      min-width: 280px;
+    .gallery img {
+      width: 250px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 4px solid #fdf0f9;
+      background: white;
     }
 
-    .column h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #000;
+    .gallery img:hover {
+      transform: scale(1.05) rotate(0.5deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    .column p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
+    .skincare {
+      background: radial-gradient(circle at top left, #ffeae0, #fff0f6);
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #e7d0ff;
-      color: #000;
-      font-weight: bold;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background 0.3s;
+    .hairstyle {
+      background: radial-gradient(circle at top right, #f5e8ff, #f3f0ff);
     }
 
-    .button:hover {
-      background-color: #d1baff;
+    .makeup {
+      background: radial-gradient(circle at center, #ffe7f0, #ffeef7);
     }
 
-    .image-banner {
-      background-image: url('https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/Screenshot%202025-05-06%2017.11.06.png'); 
-      background-size: cover;
-      background-position: center;
-      height: 700px;
-      width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .image-banner {
-        height: 200px;
+    @media screen and (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+        height: auto;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="section">
-    <div class="column">
-      <h2>Hairstyle</h2>
-      <p>Pengguna dapat menemukan inspirasi gaya rambut terbaru, tutorial styling yang mudah diikuti, serta tips perawatan rambut sesuai dengan jenis dan kebutuhannya.</p>
-      <a href="#" class="button">New</a>
+  <!-- Skincare Section -->
+  <section class="skincare">
+    <h2 class="section-title">Skincare</h2>
+    <p class="section-desc">
+      Hadir dengan informasi lengkap tentang perawatan kulit, mulai dari rutinitas dasar hingga solusi untuk masalah kulit seperti jerawat, kulit kering, atau tanda penuaan dini!
+    </p>
+    <div class="gallery">
+      <img src="skincare3.jpg" alt="Skincare 1">
+      <img src="skincare5.jpg" alt="Skincare 2">
+      <img src="skincare4.jpg" alt="Skincare 3">
     </div>
-    <div class="column">
-      <h2>Makeup</h2>
-      <p>Menawarkan panduan mulai dari tampilan natural hingga glamor, review produk terbaik, serta trik untuk mendapatkan hasil riasan yang tahan lama dan sesuai dengan warna kulit.</p>
-      <a href="#" class="button">Popular</a>
-    </div>
-  </div>
+  </section>
 
-  <div class="image-banner"></div>
+  <!-- Hairstyle Section -->
+  <section class="hairstyle">
+    <h2 class="section-title">Hairstyle</h2>
+    <p class="section-desc">
+      Pengguna dapat menemukan inspirasi gaya rambut terbaru, tutorial styling yang mudah diikuti, serta tips perawatan rambut sesuai dengan jenis dan kebutuhannya.
+    </p>
+    <div class="gallery">
+      <img src="hairstyle1.jpg" alt="Hairstyle 1">
+      <img src="hairstyle3.jpg" alt="Hairstyle 2">
+      <img src="hairstyle2.jpg" alt="Hairstyle 3">
+    </div>
+  </section>
+
+  <!-- Makeup Section -->
+  <section class="makeup">
+    <h2 class="section-title">Makeup</h2>
+    <p class="section-desc">
+      Menawarkan panduan mulai dari tampilan natural hingga glamor, review produk terbaik, serta trik untuk mendapatkan hasil riasan yang tahan lama dan sesuai dengan warna kulit!
+    </p>
+    <div class="gallery">
+      <img src="makeup1.jpeg" alt="Makeup 1">
+      <img src="makeup3.jpg" alt="Makeup 2">
+      <img src="makeup2.jpg" alt="Makeup 3">
+    </div>
+  </section>
 
 </body>
 </html>
 
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Galeri Kecantikan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Highlight Section | Serenity Beauty</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4edfa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff6fb;
     }
 
-    .galeri-wrapper {
-      height: 100vh;
-      background-image: url('Pastel Pink Dreamy Blur Cloud Y2K Sustainable Beauty Business Presentation (1).png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .highlight-section {
+      background: linear-gradient(135deg, #ffe2f0, #fef7ff);
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: inset 0 0 20px rgba(255, 192, 203, 0.2);
     }
 
-    .galeri-wrapper h1 {
-      color: white;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    .highlight-section h2 {
+      font-size: 2.8rem;
+      color: #c94e92;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .highlight-section a.btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: #d87093;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(216, 112, 147, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .highlight-section a.btn:hover {
+      background-color: #c05282;
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
 
-  <div class="galeri-wrapper">
-  </div>
+  <section class="highlight-section">
+    <h2>Tampil Cantik, Tampil Percaya Diri</h2>
+    <p>
+      Temukan inspirasi kecantikan terbaik dari skincare harian, gaya rambut terkini, hingga makeup elegan yang sesuai dengan kepribadianmu. Biarkan Syahrène Beauty membantu kamu bersinar setiap hari.
+    </p>
+    <a href="project web/contact.html" class="btn">Hubungi Kami</a>
+  </section>
 
 </body>
 </html>
@@ -379,17 +370,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Newsletter Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4edfa;
+      background-color: #ffeef7;
       color: #000;
     }
 
     .newsletter-section {
-      background-color: #fef3ad;
-      padding: 60px 20px 40px;
+      background-color: #ffebc5;
+      padding: 20px 20px 40px;
       text-align: center;
     }
 
@@ -458,15 +450,19 @@
     }
 
     .social-icons {
-      margin: 30px 0;
+      margin-bottom: 20px;
     }
 
     .social-icons a {
-      display: inline-block;
       margin: 0 10px;
+      font-size: 1.5rem;
+      color: #333;
+      transition: color 0.3s ease;
       text-decoration: none;
-      color: black;
-      font-size: 24px;
+    }
+
+    .social-icons a:hover {
+      color: #d87093;
     }
 
     .footer {
@@ -479,7 +475,7 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .form-box form {
         flex-direction: column;
         align-items: stretch;
@@ -491,7 +487,6 @@
     }
   </style>
   <script>
-    // Optional JS for form submit
     function handleSubmit(e) {
       e.preventDefault();
       alert("Subscribed! (demo)");
@@ -515,14 +510,12 @@
       </div>
     </div>
 
-    
+    <!-- Sosial Media Icons -->
     <div class="social-icons">
-      <div class="icons">
-        <img src="https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/5282542_linkedin_network_social%20network_linkedin%20logo_icon.png" alt="Favorite Icon">
-        <img src="https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/5282541_fb_social%20media_facebook_facebook%20logo_social%20network_icon.png" alt="User Icon">
-        <img src="https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/5282548_play_player_video_youtube_youtuble%20logo_icon.png" aria-atomic
-        </div>
-      </div>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     </div>
 
     <div class="footer">
@@ -530,133 +523,5 @@
     </div>
   </section>
 
-  <!DOCTYPE html>
-  <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauty Page</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #fff7f8;
-        color: #333;
-      }
-
-      .hero {
-        background-image: url('https://github.com/Arnisyahh/My_GitHub_Website/blob/main/folder-img/download.png'); /* Ganti dengan nama file background Anda */
-        background-size: cover;
-        background-position: center;
-        height: 600px;
-        position: relative;
-      }
-
-      .overlay {
-        background-color: rgba(255, 255, 255, 0.8);
-        position: absolute;
-        inset: 0;
-      }
-
-      .content {
-        text-align: center;
-        padding: 80px 20px;
-        background-color: #FFE6A7;
-      }
-
-      .content h1 {
-        font-size: 50px;
-        font-weight: bold;
-        color: #000000;
-      }
-
-      .content p {
-        font-size: 16px;
-        margin-top: 10px;
-      }
-
-      .section {
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      .section h2 {
-        font-size: 50px;
-        margin-bottom: 40px;
-        color: #000000;
-      }
-
-      .cards {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
-      .card {
-        width: 300px;
-        background-color: white;
-        border-radius: 16px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-10px);
-      }
-
-      .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      .card h3 {
-        margin: 15px;
-        font-size: 20px;
-        color: #d94f70;
-      }
-
-      .card p {
-        margin: 0 15px 15px;
-        font-size: 14px;
-        color: #666;
-      }
-
-      footer {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #fff5b1;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin: 20px 0;
-      }
-
-      .social-icons a img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-      }
-
-      .social-icons a img:hover {
-        transform: scale(1.2);
-      }
-
-      .footer-text {
-        font-size: 14px;
-        color: #333;
-      }
-    </style>
-  </head>
-  <body>
-
-  </body>
-  </html>
-
-  
+</body>
+</html>
