@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Serenity Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fffaf5;
+    }
+
+    header {
+      background: linear-gradient(to right, #ffebc5, #e1f0ff, #e7d6ff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d87093;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #d87093;
+    }
+
+    .icons a {
+      color: #333;
+      margin-left: 15px;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+
+    .icons a:hover {
+      color: #d87093;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('background.png') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 120px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #ffeecf;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      display: flex;
+      background: none;
+      border-radius: 50px;
+      padding: 10px 20px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      align-items: center;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 50px;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+    }
+
+    .search-box button:hover {
+      color: black;
+    }
+
+    .chat-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #5a4fcf;
+      color: white;
+      padding: 0.8rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .search-box {
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 12px;
+      }
+
+      .search-box input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+  <script>
+    function handleSearch(e) {
+      e.preventDefault();
+      const keyword = document.getElementById('searchInput').value;
+      alert('Anda mencari: ' + keyword);
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Syahrène</div>
+    <nav>
+      <a href="https://230c6f14-4f3d-4cf0-b4c4-59e5a51f0af6-00-2z3nzew17qgcd.sisko.replit.dev/index.html">Home</a>
+      <a href="project web/about.html">About</a>
+      <a href="project web/hairstyle.html">Hairstyle</a>
+      <a href="project web/makeup.html">Makeup</a>
+      <a href="project web/skincare.html">Skincare</a>
+      <a href="project web/contact.html">Contact</a>
+      <a href="project web/blog.html">Blog</a>
+    </nav>
+    <div class="icons">
+      <a href="/project web/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+      <a href="/project web/user.html"><i class="fa-regular fa-user"></i></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Shine with Serenity!</h1>
+    <form class="search-box" onsubmit="handleSearch(event)">
+      <input type="text" id="searchInput" placeholder="Cari tips, produk, atau artikel...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </section>
+
+  <a href="project web/chat.html" class="chat-icon">
+    <i class="fa-solid fa-comment"></i>
+  </a>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Serenity Beauty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #fffaf5, #fff0f6);
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      color: #b45787;
+      font-weight: bold;
+    }
+
+    .section-desc {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 4px solid #fdf0f9;
+      background: white;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05) rotate(0.5deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .skincare {
+      background: radial-gradient(circle at top left, #ffeae0, #fff0f6);
+    }
+
+    .hairstyle {
+      background: radial-gradient(circle at top right, #f5e8ff, #f3f0ff);
+    }
+
+    .makeup {
+      background: radial-gradient(circle at center, #ffe7f0, #ffeef7);
+    }
+
+    @media screen and (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skincare Section -->
+  <section class="skincare">
+    <h2 class="section-title">Skincare</h2>
+    <p class="section-desc">
+      Hadir dengan informasi lengkap tentang perawatan kulit, mulai dari rutinitas dasar hingga solusi untuk masalah kulit seperti jerawat, kulit kering, atau tanda penuaan dini!
+    </p>
+    <div class="gallery">
+      <img src="skincare3.jpg" alt="Skincare 1">
+      <img src="skincare5.jpg" alt="Skincare 2">
+      <img src="skincare4.jpg" alt="Skincare 3">
+    </div>
+  </section>
+
+  <!-- Hairstyle Section -->
+  <section class="hairstyle">
+    <h2 class="section-title">Hairstyle</h2>
+    <p class="section-desc">
+      Pengguna dapat menemukan inspirasi gaya rambut terbaru, tutorial styling yang mudah diikuti, serta tips perawatan rambut sesuai dengan jenis dan kebutuhannya.
+    </p>
+    <div class="gallery">
+      <img src="hairstyle1.jpg" alt="Hairstyle 1">
+      <img src="hairstyle3.jpg" alt="Hairstyle 2">
+      <img src="hairstyle2.jpg" alt="Hairstyle 3">
+    </div>
+  </section>
+
+  <!-- Makeup Section -->
+  <section class="makeup">
+    <h2 class="section-title">Makeup</h2>
+    <p class="section-desc">
+      Menawarkan panduan mulai dari tampilan natural hingga glamor, review produk terbaik, serta trik untuk mendapatkan hasil riasan yang tahan lama dan sesuai dengan warna kulit!
+    </p>
+    <div class="gallery">
+      <img src="makeup1.jpeg" alt="Makeup 1">
+      <img src="makeup3.jpg" alt="Makeup 2">
+      <img src="makeup2.jpg" alt="Makeup 3">
+    </div>
+  </section>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Highlight Section | Serenity Beauty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff6fb;
+    }
+
+    .highlight-section {
+      background: linear-gradient(135deg, #ffe2f0, #fef7ff);
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: inset 0 0 20px rgba(255, 192, 203, 0.2);
+    }
+
+    .highlight-section h2 {
+      font-size: 2.8rem;
+      color: #c94e92;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .highlight-section a.btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: #d87093;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(216, 112, 147, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .highlight-section a.btn:hover {
+      background-color: #c05282;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="highlight-section">
+    <h2>Tampil Cantik, Tampil Percaya Diri</h2>
+    <p>
+      Temukan inspirasi kecantikan terbaik dari skincare harian, gaya rambut terkini, hingga makeup elegan yang sesuai dengan kepribadianmu. Biarkan Syahrène Beauty membantu kamu bersinar setiap hari.
+    </p>
+    <a href="project web/contact.html" class="btn">Hubungi Kami</a>
+  </section>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffeef7;
+      color: #000;
+    }
+
+    .newsletter-section {
+      background-color: #ffebc5;
+      padding: 20px 20px 40px;
+      text-align: center;
+    }
+
+    .newsletter-section h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-section p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .form-box {
+      background: white;
+      padding: 40px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .form-box h2 {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .form-box form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    input[type="email"] {
+      flex: 1 1 250px;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #e0d1c6;
+      background-color: #f7ebe8;
+      border-radius: 2px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 16px;
+      background-color: white;
+      border: 2px solid #f0e2d6;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #fdf6f2;
+    }
+
+    .checkbox {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .checkbox input {
+      margin-right: 8px;
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #333;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #d87093;
+    }
+
+    .footer {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .footer a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .form-box form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Subscribed! (demo)");
+    }
+  </script>
+</head>
+<body>
+
+  <section class="newsletter-section">
+    <h1>Unlock the Glow – Your Beauty Journey Starts Here!</h1>
+    <p>Dapatkan info terbaru seputar hairstyle, makeup, skincare, dan promo menarik langsung ke emailmu.</p>
+
+    <div class="form-box">
+      <h2>Subscribe to get exclusive updates</h2>
+      <form onsubmit="handleSubmit(event)">
+        <input type="email" placeholder="e.g., email@example.com" required>
+        <button type="submit">Join Our Mailing List</button>
+      </form>
+      <div class="checkbox">
+        <label><input type="checkbox"> I want to subscribe to your mailing list.</label>
+      </div>
+    </div>
+
+    <!-- Sosial Media Icons -->
+    <div class="social-icons">
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer">
+      © 2025 Syahrène. Designed for beauty lovers.
+    </div>
+  </section>
+
+</body>
+</html>
+
+
